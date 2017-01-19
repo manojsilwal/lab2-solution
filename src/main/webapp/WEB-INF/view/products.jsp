@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link href="resources/css/loginstyle.css" rel="stylesheet" type="text/css"></head>
+<link href="/Waa/resources/css/main.css" rel="stylesheet" type="text/css"></head>
 <body>
 	<div class="content">
 		<ul class="products">
