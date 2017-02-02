@@ -16,11 +16,6 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 	
-	@RequestMapping("/")
-	public String home(Model model){
-		System.out.println(productService.findAll());
-		return "redirect:/products";
-	}
 	@RequestMapping(value="/products", method=RequestMethod.GET)
 	public String getAll(Model model){
 		model.addAttribute("products",productService.findAll());

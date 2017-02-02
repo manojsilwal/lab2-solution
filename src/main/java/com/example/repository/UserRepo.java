@@ -11,7 +11,7 @@ public class UserRepo {
 	User user = new User();
 
 	public User findUser() {
-		user.setName("admin");
+		user.setUsername("admin");
 		user.setPassword("test123");
 		return user;
 	}

@@ -1,14 +1,72 @@
 package com.example.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity
 public class User {
-	private String name;
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	private String username;
 	
 	private String password;
 
+	private boolean enabled;
 	
+	private String role;
 	public User() {
 		
 	}
+	
+	
+
+	public User(int id, String name, String password, boolean enabled, String role) {
+		super();
+		this.username = name;
+		this.password = password;
+		this.enabled = enabled;
+		this.role = role;
+	}
+
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
 
 	public String getPassword() {
 		return password;
@@ -18,15 +76,15 @@ public class User {
 		this.password = password;
 	}
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		return result;
 	}
@@ -40,10 +98,10 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (name == null) {
-			if (other.name != null)
+		if (username == null) {
+			if (other.username != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!username.equals(other.username))
 			return false;
 		if (password == null) {
 			if (other.password != null)
@@ -53,7 +111,7 @@ public class User {
 		return true;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String name) {
+		this.username = name;
 	}
 }

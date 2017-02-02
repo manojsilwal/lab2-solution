@@ -53,7 +53,10 @@
 			  color: #333;
 			  padding:10px;
 			}
-			
+			section.product-detail{
+				width : 100%;
+				text-align : center;
+			}
 			section.product-detail img{
 				width:100%;
 				
